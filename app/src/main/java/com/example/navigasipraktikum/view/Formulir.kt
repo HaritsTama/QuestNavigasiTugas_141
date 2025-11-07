@@ -101,7 +101,45 @@ fun FormulirP(modifier: Modifier
                             )
                         }
 
+                        Spacer(modifier = Modifier.height(20.dp))
 
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.Start
+                        ) {
+                            Text(
+                                text = "JENIS KELAMIN",
+                                fontSize = 12.sp,
+                                color = Color.Black,
+                                modifier = Modifier.padding(bottom = 8.dp)
+                            )
+                            genderp.forEach { item ->
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .selectable(
+                                            selected = textKelamin == item,
+                                            onClick = { textKelamin = item }
+                                        )
+                                        .padding(vertical = 4.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(
+                                        selected = textKelamin == item,
+                                        onClick = { textKelamin = item },
+                                    )
+                                    Text(
+                                        text = item,
+                                        color = Color.Black,
+                                        fontSize = 14.sp,
+                                        modifier = Modifier.padding(start = 8.dp)
+                                    )
+                                }
+                            }
+                        }
+
+
+                        }
                     }
                 }
             }
