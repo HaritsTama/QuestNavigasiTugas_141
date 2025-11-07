@@ -198,7 +198,31 @@ fun FormulirP(modifier: Modifier
                             )
                         }
 
+                        Spacer(modifier = Modifier.height(28.dp))
 
+                        Button(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(50.dp),
+                            enabled = textAlamatP.isNotEmpty(),
+                            onClick = {
+                                namal = textNamaLengkap
+                                jenisp = textKelamin
+                                kawinp = textKawin
+                                alamatp = textAlamatP
+                            },
+                            shape = RoundedCornerShape(25.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color.Blue,
+                                disabledContainerColor = Color.Gray,
+                            )
+                        ) {
+                            Text(
+                                text = "Submit",
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Medium,
+                                color = Color.White
+                            )
                         }
                     }
                 }
