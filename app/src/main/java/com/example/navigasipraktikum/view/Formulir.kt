@@ -138,6 +138,66 @@ fun FormulirP(modifier: Modifier
                             }
                         }
 
+                        Spacer(modifier = Modifier.height(16.dp))
+
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.Start
+                        ) {
+                            Text(
+                                text = "STATUS PERKAWINAN",
+                                fontSize = 12.sp,
+                                color = Color.Black,
+                                modifier = Modifier.padding(bottom = 8.dp)
+                            )
+                            perkawinan.forEach { item ->
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .selectable(
+                                            selected = textKawin == item,
+                                            onClick = { textKawin = item }
+                                        )
+                                        .padding(vertical = 4.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(
+                                        selected = textKawin == item,
+                                        onClick = { textKawin = item },
+                                    )
+                                    Text(
+                                        text = item,
+                                        color = Color.Black,
+                                        fontSize = 14.sp,
+                                        modifier = Modifier.padding(start = 8.dp)
+                                    )
+                                }
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.height(20.dp))
+
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.Start
+                        ) {
+                            Text(
+                                text = "ALAMAT",
+                                fontSize = 12.sp,
+                                color = Color.Black,
+                                modifier = Modifier.padding(bottom = 8.dp)
+                            )
+                            OutlinedTextField(
+                                value = textAlamatP,
+                                singleLine = true,
+                                modifier = Modifier.fillMaxWidth(),
+                                label = { Text(text = "Isian nama lengkap") },
+                                onValueChange = {
+                                    textAlamatP = it
+                                }
+                            )
+                        }
+
 
                         }
                     }
