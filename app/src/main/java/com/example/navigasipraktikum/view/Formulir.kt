@@ -15,5 +15,6 @@ import androidx.compose.ui.Modifier
 fun FormulirP(modifier: Modifier
 ) {
     var textNamaLengkap by remember { mutableStateOf("") }
+    var textAlamatP by remember { mutableStateOf("") }
 
 }
