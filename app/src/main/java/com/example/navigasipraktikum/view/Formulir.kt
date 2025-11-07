@@ -24,4 +24,6 @@ fun FormulirP(modifier: Modifier
     var jenisp by remember { mutableStateOf("") }
     var kawinp by remember { mutableStateOf("") }
 
+    val genderp:List<String> = listOf("Laki-laki","Perempuan")
+
 }
