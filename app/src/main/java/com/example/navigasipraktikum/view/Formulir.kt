@@ -17,5 +17,6 @@ fun FormulirP(modifier: Modifier
     var textNamaLengkap by remember { mutableStateOf("") }
     var textAlamatP by remember { mutableStateOf("") }
     var textKelamin by remember { mutableStateOf("") }
+    var textKawin by remember { mutableStateOf("") }
 
 }
