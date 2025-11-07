@@ -20,5 +20,6 @@ fun FormulirP(modifier: Modifier
     var textKawin by remember { mutableStateOf("") }
 
     var namal by remember { mutableStateOf("") }
+    var alamatp by remember { mutableStateOf("") }
 
 }
