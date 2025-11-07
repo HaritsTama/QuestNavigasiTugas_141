@@ -19,4 +19,6 @@ fun FormulirP(modifier: Modifier
     var textKelamin by remember { mutableStateOf("") }
     var textKawin by remember { mutableStateOf("") }
 
+    var namal by remember { mutableStateOf("") }
+
 }
